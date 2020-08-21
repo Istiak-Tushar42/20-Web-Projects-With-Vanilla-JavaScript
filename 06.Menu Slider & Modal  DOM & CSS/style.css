@@ -13,6 +13,7 @@
 body {
     font-family: 'Lato', sans-serif;
     margin: 0;
+    overflow-x: hidden;
 }
 
 body.show-nav {
@@ -176,6 +177,14 @@ p {
     margin-bottom: 5px;
 }
 
+.modal-form label::after {
+    position: absolute;
+    content: '*';
+    color: red;
+    font-size: 20px;
+    margin-left: 3px;
+}
+
 .modal-form .form-input {
     padding: 8px;
     width: 100%;
@@ -189,6 +198,10 @@ p {
     right: 0;
 }
 
+.submit-btn:focus {
+    outline: none;
+}
+
 @keyframes modalopen {
     from {
         opacity: 0;
@@ -197,4 +210,15 @@ p {
     to {
         opacity: 1;
     }
+}
+
+.error {
+    color: red;
+    margin: 0px !important;
+    margin-top: 2px !important;
+    font-size: 14px;
+}
+
+.success {
+    border-color: green;
 }
